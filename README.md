@@ -9,7 +9,7 @@ need to install `meson` from pip, as the version packaged with raspbian is too
 old.
 
 ```sh
-$ python3 pip meson
+$ python3 -m pip install meson
 ```
 
 Make sure that `$HOME/.local/bin` is added to `$PATH` in your `.bashrc`.
@@ -18,6 +18,18 @@ Make sure that `$HOME/.local/bin` is added to `$PATH` in your `.bashrc`.
 $ meson build
 $ cd build
 $ ninja
+```
+
+In order to run ninja as root, you also need meson installed for root:
+
+```sh
+$ sudo python3 -m pip install meson
+```
+
+Finally you can do:
+
+```sh
+$ sudo ninja install
 ```
 
 GTK — The GTK toolkit
