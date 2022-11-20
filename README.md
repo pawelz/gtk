@@ -1,3 +1,25 @@
+Raspbian notes
+==============
+
+As of 2022-11-20 there is no gtk4 package for Raspbian.
+
+In order to install it in Raspbian you need to disable some dependendencies –
+Wayland and gstreamer-player. Both done already in this fork. Furthermore you
+need to install `meson` from pip, as the version packaged with raspbian is too
+old.
+
+```sh
+$ python3 pip meson
+```
+
+Make sure that `$HOME/.local/bin` is added to `$PATH` in your `.bashrc`.
+
+```sh
+$ meson build
+$ cd build
+$ ninja
+```
+
 GTK — The GTK toolkit
 =====================
 

@@ -7,7 +7,7 @@ option('x11-backend',
 
 option('wayland-backend',
        type: 'boolean',
-       value: true,
+       value: false,
        description : 'Enable the wayland gdk backend (only when building on Unix except for macOS)')
 
 option('broadway-backend',
@@ -36,7 +36,7 @@ option('media-ffmpeg',
 
 option('media-gstreamer',
        type: 'feature',
-       value: 'enabled',
+       value: 'disabled',
        description : 'Build the gstreamer media backend')
 
 # Print backends
