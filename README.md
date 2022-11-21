@@ -30,7 +30,11 @@ Finally you can do:
 
 ```sh
 $ sudo ninja install
+$ sudo ldconfig
 ```
+
+Now you can build against gtk4 passing `$(pkg-config --cflags gtk4) to the
+compiler and `$(pkg-config --libs gtk4)` to the linker.
 
 GTK — The GTK toolkit
 =====================
